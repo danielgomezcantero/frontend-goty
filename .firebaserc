@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestore-grafica-1ff32": {
+      "hosting": {
+        "goty": [
+          "firestore-grafica-1ff32"
+        ]
+      }
+    }
+  }
+}

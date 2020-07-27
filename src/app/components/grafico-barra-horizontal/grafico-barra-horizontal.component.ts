@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Game } from '../../interfaces/interface';
 
 @Component({
   selector: 'app-grafico-barra-horizontal',
@@ -7,27 +8,30 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class GraficoBarraHorizontalComponent implements OnInit, OnDestroy {
 
+
+  @Input('juegosFire') results:Game[];
+
   
   ngOnInit(): void {
   }
-  results: any[]=[
-    {
-      "name": "Juego 1",
-      "value": 17
-    },
-    {
-      "name": "Juego 2",
-      "value": 25
-    },
-    {
-      "name": "Juego 3",
-      "value": 50
-    },
-    {
-      "name": "Juego 4",
-      "value": 30
-    }
-  ];
+  // results: any[]=[
+  //   {
+  //     "name": "Juego 1",
+  //     "value": 17
+  //   },
+  //   {
+  //     "name": "Juego 2",
+  //     "value": 25
+  //   },
+  //   {
+  //     "name": "Juego 3",
+  //     "value": 50
+  //   },
+  //   {
+  //     "name": "Juego 4",
+  //     "value": 30
+  //   }
+  // ];
  
 
  
@@ -48,19 +52,19 @@ export class GraficoBarraHorizontalComponent implements OnInit, OnDestroy {
 
   constructor() {
 
-    this.intervalo = setInterval(()=>{
+    // this.intervalo = setInterval(()=>{
 
-      console.log('tick');
+    //   console.log('tick');
       
-       const newResults = [...this.results];
+    //    const newResults = [...this.results];
 
-      for( let i in newResults){
-        newResults[i].value= Math.round( Math.random() * 500 ) ;
-      }
+    //   for( let i in newResults){
+    //     newResults[i].value= Math.round( Math.random() * 500 ) ;
+    //   }
 
-      this.results = [...newResults]
+    //   this.results = [...newResults]
 
-    }, 1500 );
+    // }, 1500 );
 
   }
 
